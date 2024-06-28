@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All pages</title>
+</head>
+<body>
+    <main style="text-align: center;">
+        <h1>All pages</h1>
+        <hr>
+        {% for page in pages %}
+            <h3><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></h3>
+        {% endfor %}
+    </main>
+</body>
+</html>

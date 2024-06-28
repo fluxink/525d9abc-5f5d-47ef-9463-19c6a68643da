@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <main style="width: min-content;margin: auto;">
+        <div style="text-align: center;">
+            {% if page.image %}
+            {% load cropping %}
+            <img src="{% cropped_thumbnail page "cropping" scale=0.5 %}" style="max-height: 450px;">
+            {% endif %}
+        </div>
+        <h1>{{ page.title }}</h1>
+        <div>
+            {{ page.content|safe }}
+        </div>
+    </main>
+</body>
+</html>
